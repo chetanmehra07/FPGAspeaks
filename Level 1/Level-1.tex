@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[export]{adjustbox}
+\usepackage{float}
+\usepackage[a4paper, margin=1.8cm, total={8in, 8in}]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=cyan,
+}
+
+\title{\textbf{ FPGAspeaks \\Level - 1}}
+\author{Raj Kohale}
+\date{10 September 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{ Introduction } 
+ In this Level I have learned Functionalities of basic logic gates using verilog programming.
+ 
+ \textbf{ \underline{Gates:}}
+ \begin{itemize}
+
+ 
+
+\item  AND gate :  
+\newline The AND gate is a basic digital logic gate that implements logical conjunction from mathematical logic. A HIGH output (1) results only if all the inputs to the AND gate are HIGH. Otherwise, LOW output results.Logical expression is Y=A.B
+\item  OR gate
+\newline The output is HIGH if either or both of the inputs are HIGH. If both inputs are LOW then the output is LOW. Logical expression for OR gate is Y= A
++B.
+
+\item  NOT gate
+\newline A NOT gate performs logical negation on its input. If the input is HIGH then the output will be LOW. Similarly,a LOW input results in a HIGH output. Logical expression for NOT gate is Y= $\overline{ A }$
+
+\item  NAND gate
+\newline A logic gate which produces an output which is LOW only if all its inputs are HIGH. thus its output is complement to that of an AND gate.  Logical expression for NAND gate is Y=  $\overline {A.B} $
+
+\item  NOR gate
+\newline  A HIGH output (1) results if both the inputs to the gate are LOW (0); if one or both input is HIGH (1), a LOW output (0) results. NOR is the result of the negation of the OR operator. Logical expression for NOR gate is Y=  $\overline {A+B}.$
+
+\item  XOR gate
+\newline The output is HIGH if either, but not both of the inputs are HIGH.The output is LOW if both inputs are LOW or if both inputs are HIGH. Logical expression for XOR gate is Y=$\overline{A}$.B+A.$\overline{B}$
+
+\item  XNOR gate
+\newline The output of an XNOR gate is HIGH when all of its inputs are HIGH or when all of its inputs are LOW. Logical expression for XNOR gate is Y=AB+$\overline{AB}$
+
+
+
+ \end{itemize}
+
+
+\section{ Pre - Requisite } 
+ \begin{itemize}
+ \item Truth table and expression of logic gates
+ \item  Verilog HDL Language 
+\end{itemize}
+\section{ Tools/Requirements }
+\textbf{Xiling Vivado}
+To simulate and for observing behaviour of different logic gate we need Xiling Vivado tool.Vivado is a software for synthesis and analysis of hardware description language designs, superseding Xilinx ISE with additional features for system on a chip development and high-level synthesis.
+
+
+\section{ What have I done? }
+I have written Verilog code for all logic gates in verilog hdl language by using modules.
+
+\underline{basic syntax of module:} 
+\newline 
+example,
+\begin{figure}[H]
+    \centering
+    \includegraphics{syntax.jpg}
+    
+    
+\end{figure}
+I have written all codes according to given module syntax in Xiling Vivado and perform Simulation to observed functionalities of logic gate according to given input signals. Also obtain RTL Schematics for each logic gate and for further use I am making a collection of each logic gate code on Github under project \href{https://github.com/RajKohale/FPGAspeaks}{ \textbf{"FPGAspeaks" }}.
+
+\section{ Observation}
+\underline{Simulation of AND gate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{And simulation.png}
+    \caption{Simulation}
+    \label{fig:Simulation}
+\end{figure}
+
+\underline{RTL SChematic for AND gate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{And RTL SChematic.png}
+    \caption{RTL Schematic }
+    \label{fig:enter-label}
+\end{figure}
+
+Similarly, I have observed simulation and RTL schematic for all basic logic gates.
+
+\section{For more information}
+\subsection{
+\textbf{
+\href{https://github.com/RajKohale/FPGAspeaks}{Github} } }
+\end{document}
