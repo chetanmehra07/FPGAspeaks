@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[export]{adjustbox}
+\usepackage{float}
+\usepackage[a4paper, margin=1.8cm, total={8in, 8in}]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=cyan,
+}
+
+\title{\textbf{Hardware Implementation}}
+\author{Raj Kohale}
+\date{April 2024}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+In this section I have done basic program implementation on a Hardware where we use ZYBO Z-7010. Here I have done two types of implementation 
+\newline 1. By using ZYBO kit input/output port 
+\newline 2. BY using Virtual input/output on FPGA.
+
+\section{ Tools/Requirements }
+\subsection{Xiling Vivado}
+To simulate and for observing behaviour of different logic gate we need Xiling Vivado tool.Vivado is a software for synthesis and analysis of hardware description language designs, superseding Xilinx ISE with additional features for system on a chip development and high-level synthesis.
+
+\subsection{ZYBO Z-7010}
+The ZYBO (ZYnq BOard) is a feature-rich, ready-to-use, entry-level embedded software and digital circuit development platform built around the smallest member of the Xilinx Zynq-7000 family, the Z-7010. The Z-7010 is based on the Xilinx All Programmable System-on-Chip (AP SoC) architecture, which tightly integrates a dual-core ARM Cortex-A9 processor with Xilinx 7-series Field Programmable Gate Array (FPGA) logic. When coupled with the rich set of multimedia and connectivity peripherals available on the ZYBO, the Zynq Z-7010 can host a whole system design.
+\section{What I have done?}
+\subsection{Basic Overview}
+I have written verilog code Binary to Gray converter in Xiling Vivado then by doing simulation I have observed behaviour of program. After that I have set input/output Power supply i.e.(3.3V) and save constrained file with extension XDC and perform RUN Implementation and generate bit stream for program.
+\newline    After creating bit stream I have connected ZYBO kit with system and turn on kit(power supply for kit 5V). Then from Open hardware manager I have choose target and connect ZYBO kit with Xiling Vivado. After that I have dump file on kit and by changing inputs from kit buttons I have observed output from LEDs.
+
+\subsection{Steps to be followed}
+\subsubsection{Step 1}
+Write the verilog code and test bench for the given execution and save  the file in Design Source and Simulation Source.
+
+\subsubsection{Step 2}
+\textbf{Simulation}
+\newline Perform the run simulation and observe the simulated result and verify with the inputs which is given from the testbench.
+
+\subsubsection{Step3}
+\textbf{RTL analysis (Schematic)}
+\newline Go for the I/O planning and select package pin and set the pin numbers which we are using for inputs and outputs.(pin numbers will be given on the kit). Similarly, set the values of I/O standards for the inputs and outputs. (refer data sheet for the I/O standards values for each input and output).
+Finally save the file with the extension of .xdc.
+
+\subsubsection{Step 4}
+\textbf{Synthesis and Run Implementation}
+\newline
+Go for the run synthesis, during synthesis in Xilinx Vivado, the tool translates Register Transfer Level (RTL) code, written in Hardware Description Languages (HDLs) (i.e. Verilog) into a netlist. This netlist represents a digital circuit composed of logic gates and flip-flops.
+
+\subsubsection{Step5}
+\textbf{Hardware Connection}
+\newline
+Connect the FPGA board to the Device.
+
+\subsubsection{Step6}
+\newline
+\textbf{Program and Debug }
+\newline Click on Generate Bitstream, it will generate bitstream of program.
+\newline 
+\textbf{Bitstream} The bitstream tells the FPGA how to connect its internal building blocks (logic gates and flip-flops) to achieve the desired functionality based on the program.
+\newline Select Program device from the open hardware manager and give the bitstream file to the device. It will dump bitstreams on the FPGA board.
+
+\subsubsection{Step 6}
+\textbf{Hardware Implementation}
+\newline 
+Give the different inputs from the inputs buttons and observe the output from the Leds.
+
+
+
+\newpage
+\section{Observations}
+\subsection{Binary to Gray code}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bin to gray.png}
+    \caption{Verilog code for binary to gray}
+    \label{fig:Verilog Code for binary to gray}
+\end{figure}
+
+\subsection{Testbench}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Testbench.png}
+    \caption{Testbench}
+    \label{fig:Testbench}
+\end{figure}
+\subsection{Simulation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Simulation .png}
+    \caption{Simulation}
+    \label{fig:Simulation}
+\end{figure}
+
+\subsection{RTL analysis schematic}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{RTL analysis Schematic.png}
+    \caption{RTL analysis schematic}
+    \label{fig:RTL analysis schematic}
+\end{figure}
+
+\subsection{FPGA board connection}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{fpga board.jpeg}
+    \caption{FPGA board}
+    \label{fig:FPGA board}
+\end{figure}
+
+
+
+
+
+
+
+
+\section{What I have learned?}
+\begin{enumerate}
+    \item  How to write verilog code for the given functionality.
+    \item By creating testbench for the code observe the simulation output and check the given code matched with functionality or not.
+    \item Observe the RTL Schematic and do I/O floor planning.
+    \item How to generate bitstream from the code.
+    \item How the output will be coming by varying the inputs on the kit, which shows the desired functionality based on the our requirements.
+\end{enumerate}
+
+\section{Demonstration}
+\newline
+\href{https://github.com/RajKohale/FPGAspeaks}{  Hardware implementation}
+
+
+
+
+\end{document}
