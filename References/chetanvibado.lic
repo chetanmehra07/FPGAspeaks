@@ -1,0 +1,29 @@
+# ----- REMOVE LINES ABOVE HERE --------------------------
+#
+# This license is valid from Tue Aug 06 08:49:44 UTC 2024.
+#
+# This is license NODELOCKED to HOSTID=ANY;
+# there is no need to run lmgrd for this license.
+#
+#
+# This is a permanent license generated on Tue Aug 06 08:49:44 UTC 2024
+INCREMENT SDK xilinxd 2025.08 permanent uncounted 82C12157C437 \
+VENDOR_STRING=623110@student.nitandhra.ac.in,SDK,software,permanent,_213126623_0_0_365 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=06-Aug-2024 TS_OK
+#
+# This is a permanent license generated on Tue Aug 06 08:49:44 UTC 2024
+INCREMENT V_WebPACK xilinxd 2025.08 permanent uncounted 42E3D5187D49 \
+VENDOR_STRING=623110@student.nitandhra.ac.in,V_WebPACK,software,permanent,_213126623_0_0_668 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=06-Aug-2024 TS_OK
+#
+# This is a permanent license generated on Tue Aug 06 08:49:44 UTC 2024
+INCREMENT Analyzer xilinxd 2025.08 permanent uncounted 3680E7EA93E3 \
+VENDOR_STRING=623110@student.nitandhra.ac.in,Analyzer,software,permanent,_213126623_0_0_161 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=06-Aug-2024 TS_OK
+#
+# This is a permanent license generated on Tue Aug 06 08:49:44 UTC 2024
+INCREMENT HLS xilinxd 2025.08 permanent uncounted 7BB7CF5A60FC \
+VENDOR_STRING=623110@student.nitandhra.ac.in,HLS,software,permanent,_213126623_0_0_223 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=06-Aug-2024 TS_OK
+#
+# ----- REMOVE LINES BELOW HERE --------------------------
